@@ -86,18 +86,19 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 	cd LDC
 	pip install -r requirements.txt
 	```
+ 
  	1. 데이터 폴더 생성
   	```
-   	cd data
-   	mkdir TRAINDATA
-   	cd TRAINDATA
-   	mkdir edge
-   	mkdir org
+   cd data
+   mkdir TRAINDATA
+   cd TRAINDATA
+   mkdir edge
+   mkdir org
    	```
    
    	2. 이미지 resizing, label 이미지 생성 및 lst 파일 생성
 	```
-   	cd ../..
+ 	cd ../..
  	python image_resize.py
  	python edge_detect.py
  	python make_lst.py
@@ -136,7 +137,7 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
  	```
 
 	2. main.py line 229 -
- 		> choose_test_data : train모드에서는 validation data로 지정
+ 		- choose_test_data : train모드에서는 validation data로 지정
 		```python
   		parser.add_argument('--choose_test_data',
                         type=int,
@@ -156,7 +157,7 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
    
   - Test
 	1. main.py line 229 -
- 		> choose_test_data : test data 지정
+ 		- choose_test_data : test data 지정
 		```python
   		parser.add_argument('--choose_test_data',
                         type=int,
