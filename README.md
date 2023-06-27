@@ -218,12 +218,12 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
     get()
   ```
 - test
-  - 저장된 모델이용하여 test(google colab)
-    1. model load
+  1. 저장된 모델이용하여 test(google colab)
+  - model load
   ```python
   model_masterpiece = load_model('/content/drive/MyDrive/딥러닝 팀플/skech_keras/mod_new.h5')
   ```
-    2. 이미지 결과 보기
+  - 이미지 결과 보기
   ```python
   new_size = (512, 512)
   img = cv2.imread('/content/aaaaaaa.png' , cv2.IMREAD_GRAYSCALE)
