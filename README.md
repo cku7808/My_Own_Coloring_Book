@@ -47,7 +47,7 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 
 
 
-### 데이터 & 모델
+### 데이터와 모델
 - 사용 데이터
 
   ![011](https://github.com/cku7808/My_Own_Coloring_Book/assets/66200628/70c489dd-efef-4091-9749-c20c456f788f)
