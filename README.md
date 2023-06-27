@@ -174,7 +174,15 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
    	```
 
 #### Sketch Keras
-
+- Requirements
+	```
+	cd sketchKeras
+	pip install -r requirements.txt
+	```
+- 이미지 준비
+  1. 다운로드 링크
+     https://drive.google.com/drive/folders/1gAkEXwKsVwEFxa-1b0NSadKCjd8Eh9qa?usp=sharing
+  
 ### 채색 모델 실행
 
 ### 참고 문헌
