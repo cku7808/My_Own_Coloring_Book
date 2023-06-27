@@ -226,18 +226,18 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
     2. 이미지 결과 보기
   ```
   new_size = (512, 512)
-img = cv2.imread('/content/aaaaaaa.png' , cv2.IMREAD_GRAYSCALE)
-img = cv2.resize(img, new_size)
+  img = cv2.imread('/content/aaaaaaa.png' , cv2.IMREAD_GRAYSCALE)
+  img = cv2.resize(img, new_size)
 
 
-img = np.expand_dims(img, axis=0)
+  img = np.expand_dims(img, axis=0)
 
 
-img = img.reshape(-1, 512,512,1)
-prediction = model_masterpiece.predict(img)
+  img = img.reshape(-1, 512,512,1)
+  prediction = model_masterpiece.predict(img)
 
-prediction = prediction.reshape(512,512,1)
-cv2_imshow(prediction)
+  prediction = prediction.reshape(512,512,1)
+  cv2_imshow(prediction)
   ```
   
 ### 채색 모델 실행
