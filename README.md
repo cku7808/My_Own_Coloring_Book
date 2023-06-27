@@ -50,13 +50,17 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 ### 데이터와 모델
 - 사용 데이터
 
-  ![011](https://github.com/cku7808/My_Own_Coloring_Book/assets/66200628/70c489dd-efef-4091-9749-c20c456f788f)
+
+	![012](https://github.com/cku7808/My_Own_Coloring_Book/assets/66200628/3238225f-b2a3-4cff-88ca-22628538f6fb)
+
 
    - 풍경 이미지 : [Kaggle Landscape Pictures](https://www.kaggle.com/datasets/arnaud58/landscape-pictures)
    - 인물 이미지 : [Flickr-Faces-HQ Dataset(FFHQ)](https://github.com/NVlabs/ffhq-dataset)
 
 
 - 사용 모델
+
+	![DL-3조_고운-_-복사본-002](https://github.com/cku7808/My_Own_Coloring_Book/assets/66200628/68fb00d8-4131-4f45-bb08-3129751ce31c)
 
 	- 화풍 변환 모델 : [Neural Style Transfer](https://www.tensorflow.org/tutorials/generative/style_transfer?hl=ko)
 	- 스케치 모델
@@ -68,7 +72,7 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 ### 프로젝트 결과물 
 - 풍경 
 
-![060](https://github.com/cku7808/My_Own_Coloring_Book/assets/66200628/022b2a22-2156-496f-802d-d89930ee6c30)
+	![060](https://github.com/cku7808/My_Own_Coloring_Book/assets/66200628/022b2a22-2156-496f-802d-d89930ee6c30)
 
 
 ### 화풍 변환 모델 실행
