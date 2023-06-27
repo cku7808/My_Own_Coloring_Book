@@ -81,6 +81,77 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 
 ### 스케치 모델 실행
 #### LDC
+- Requirements
+	```
+	cd LDC
+	pip install -r requirements.txt
+	```
+- Train
+  	1. 데이터 폴더 생성
+  	```
+   	cd data
+   	mkdir TRAINDATA
+   	cd TRAINDATA
+   	mkdir edge
+   	mkdir org
+   	```
+   
+   	2. 이미지 resizing, label 이미지 생성 및 lst 파일 생성
+	```
+   	cd ../..
+ 	python image_resize.py
+ 	python edge_detect.py
+ 	python make_lst.py
+   	```
+
+	3. dataset.py line 10 - 302
+	```
+	DATASET_NAMES = [
+        ...
+	'TRAINDATA',
+	'VALDATA',
+	'TESTDATA'
+	]
+	```
+
+	```
+	def dataset_info(dataset_name, is_linux=True):
+		if is_linux:
+			config={
+				...
+				}
+		else:
+			config={
+				...
+				'TRAINDATA': {'img_height': 512,
+                    		'img_width': 512,
+                    		'train_list': "train_pair.lst",
+                    		'data_dir': 'data/face_train',  # mean_rgb
+                    		'yita': 0.2},
+				...
+				}
+	```
+	4. dataset.py line 259  
+		```
+		if self.arg.train_data.lower() in ['TRAINDATA']
+  		```
+
+	5. main.py line 229 -
+ 		- choose_test_data : train모드에서는 validation data로 지정
+		```
+  		parser.add_argument('--choose_test_data',
+                        type=int,
+                        default=-1, 
+                        help='Choose a dataset for testing: 0 - 8')
+  		```
+  		- is_testing 설정 및 train data 지정
+		```
+  		is_testing = False
+  		...
+  		TRAIN_DATA = DATASET_NAMES[25] 
+  		```
+
+
 #### Sketch Keras
 
 ### 채색 모델 실행
