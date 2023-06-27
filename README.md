@@ -184,7 +184,7 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
      https://drive.google.com/drive/folders/1gAkEXwKsVwEFxa-1b0NSadKCjd8Eh9qa?usp=sharing
 
   2. 데이터 셋 준비(train.py line 22-41)
-  ```
+  ```python
   def get_train(x_train_folder_path,y_train_folder_path):
     x_train_file_names = os.listdir(x_train_folder_path)
     y_train_file_names = os.listdir(y_train_folder_path)
@@ -211,7 +211,7 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
   python train.py
   ```
   2. train.py line 82-85
-  ```
+  ```python
   with tf.device('/gpu:0'):
     model = load_model('mod.h5')
     print(device_lib.list_local_devices())
@@ -220,11 +220,11 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 - test
   - 저장된 모델이용하여 test(google colab)
     1. model load
-  ```
+  ```python
   model_masterpiece = load_model('/content/drive/MyDrive/딥러닝 팀플/skech_keras/mod_new.h5')
   ```
     2. 이미지 결과 보기
-  ```
+  ```python
   new_size = (512, 512)
   img = cv2.imread('/content/aaaaaaa.png' , cv2.IMREAD_GRAYSCALE)
   img = cv2.resize(img, new_size)
