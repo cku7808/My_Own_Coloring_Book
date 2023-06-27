@@ -180,8 +180,43 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 	pip install -r requirements.txt
 	```
 - 이미지 준비
-  1. 다운로드 링크
+  1. 다운로드 링크(dataset, model)
      https://drive.google.com/drive/folders/1gAkEXwKsVwEFxa-1b0NSadKCjd8Eh9qa?usp=sharing
+
+  2. 데이터 셋 준비(train.py line 22-41)
+  ```
+  def get_train(x_train_folder_path,y_train_folder_path):
+    x_train_file_names = os.listdir(x_train_folder_path)
+    y_train_file_names = os.listdir(y_train_folder_path)
+    x_train = deque([])
+    y_train = deque([])
+    new_size = (512, 512)
+    print(len(y_train_file_names), len(x_train_file_names))
+    for i in x_train_file_names:
+        from_mat = cv2.imread(x_train_folder_path + i, cv2.IMREAD_GRAYSCALE)
+        from_mat = cv2.resize(from_mat, new_size)
+        x_train.append(from_mat)
+
+    for i in y_train_file_names:
+        from_mat = cv2.imread(y_train_folder_path + i, cv2.IMREAD_GRAYSCALE)
+        from_mat = cv2.resize(from_mat, new_size)
+        from_mat = canny(from_mat)
+        y_train.append(from_mat)
+
+    return x_train,y_train
+  ```
+- train
+  1. train.py 실행
+  ```
+  python train.py
+  ```
+  2. train.py line 82-85
+  ```
+  with tf.device('/gpu:0'):
+    model = load_model('mod.h5')
+    print(device_lib.list_local_devices())
+    get()
+  ```
   
 ### 채색 모델 실행
 
