@@ -251,5 +251,15 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
   ```
   
 ### 채색 모델 실행
+#### PaletteNet
+- 데이터셋 준비
+  1. 랜덤 이미지 다운로드 후 datasets\img 폴더에 저장
+  2. 01_crop_resize.ipynb 실행 후 refined img폴더에 사용할 이미지 저장
+  3. 02_imgtopalette.ipynb 실행 후 각 사진의 대표 6가지 색 추출
+  4. 03_img_augment.ipynb 실행 후 색상증강 진행
 
+- Training & Result
+  1. 04_train.ipynb 실행으로 학습진행
+  2. 05_vizresult.ipynb로 학습 결과 확인 가능
+     
 ### 참고 문헌
