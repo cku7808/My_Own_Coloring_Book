@@ -256,8 +256,33 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
   1. 랜덤 이미지 다운로드 후 datasets\img 폴더에 저장
   2. 01_crop_resize.ipynb 실행 후 refined img폴더에 사용할 이미지 저장
   3. 02_imgtopalette.ipynb 실행 후 각 사진의 대표 6가지 색 추출
-  4. 03_img_augment.ipynb 실행 후 색상증강 진행
+	```python
+ 	def extract_colors(image, num_colors):
+	    rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+	    pixels = rgb_image.reshape(-1, 3)
+	    criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
+	    _, labels, centers = cv2.kmeans(pixels.astype(np.float32), num_colors, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
+	    hex_colors = [rgb_to_hex(color) for color in centers]
+	    return hex_colors
+ 	```
 
+  4. 03_img_augment.ipynb 실행 후 색상증강 진행
+	```python
+ 	def augment_image(img, title, hue_shift):
+	    img_HSV = matplotlib.colors.rgb_to_hsv(img)
+	    a_2d_index = np.array([[1,0,0] for _ in range(img_HSV.shape[1])]).astype('bool')
+	    img_HSV[:, a_2d_index] = (img_HSV[:, a_2d_index] + hue_shift) % 1
+	    new_img = matplotlib.colors.hsv_to_rgb(img_HSV).astype(int)
+	
+	    img = img.astype(float) / 255.0
+	    new_img = new_img.astype(float) / 255.0
+	    ori_img_LAB = rgb2lab(img)
+	    new_img_LAB = rgb2lab(new_img)
+	    new_img_LAB[:, :, 0] = ori_img_LAB[:, :, 0]
+	    new_img_augmented = (lab2rgb(new_img_LAB)*255.0).astype(int)
+	
+	    return new_img_augmented
+ 	```
 - Training & Result
   1. 04_train.ipynb 실행으로 학습진행
   2. 05_vizresult.ipynb로 학습 결과 확인 가능
