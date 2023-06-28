@@ -155,8 +155,8 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 	python main.py
    	```
    
-  - Test
-	1. main.py line 229 -
+- Test
+	1. main.py line 229 - 368
  		- choose_test_data : test data 지정
 		```python
   		parser.add_argument('--choose_test_data',
@@ -164,11 +164,21 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
                         default=-1, 
                         help='Choose a dataset for testing: 0 - 8')
   		```
+  
   		- is_testing 설정
 		```python
   		is_testing = True
   		```
-  	2. Start Trianing
+  
+  		- checkpoint file 연결
+  
+  		```python
+    	parser.add_argument('--checkpoint_data',
+  				type=str,
+                        default='24/24_model.pth',
+                        help='Checkpoint path.')
+    
+  	2. Start Testing
   	```
 	python main.py --choose_test_data=-1
    	```
