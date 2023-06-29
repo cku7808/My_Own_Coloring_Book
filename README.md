@@ -301,7 +301,7 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 
   5. 다운로드 버튼 순서대로 클릭-
      - 웹페이지 사진
-     - <img src="/web/web_play.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="web_play"></img><br/>
+     - <img src="/web/web_play.png" width="600px" height="300px" title="px(픽셀) 크기 설정" alt="web_play"></img><br/>
      
   
 
