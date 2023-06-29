@@ -292,8 +292,8 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 #### 선택된 모델를 이용해서 이미지 변환 웹페이지
 - 최종 결정된 모델을 이용하여 업로드한 이미지를 변환하여 다운로드 받을 수 있는 웹사이트 개발
   1. 다운로드 링크(model)
-     -https://drive.google.com/file/d/1Ai_cpJ7GQr1cxh66tkoDSg05CbwcQaQj/view?usp=sharing
-     -다운로드 후 web폴더에 넣기
+     +https://drive.google.com/file/d/1Ai_cpJ7GQr1cxh66tkoDSg05CbwcQaQj/view?usp=sharing
+     	-다운로드 후 web폴더에 넣기
      
   3. web 폴더에 flask_app.py 실행
 
