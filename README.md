@@ -8,7 +8,9 @@
 2. [프로젝트 프로세스](#프로젝트-프로세스)
 3. [데이터와 모델](#데이터와-모델)
 4. [프로젝트 결과물](#프로젝트-결과물)
-5. [화풍 변환 모델 실행](#화풍-변환-모델-실행)
+5. 화풍 변환 모델 실행
+   - [Neural Style Transfer](#Neural-Style-Transfer)
+   - [CycleGAN](#CycleGAN)
 6. 스케치 모델 실행
    - [LDC](#LDC)
    - [Sketch Keras](#Sketch-Keras)
@@ -46,10 +48,6 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 
 
 
-
-
-
-
 ### 데이터와 모델
 - 사용 데이터
 
@@ -62,15 +60,22 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 
 
 - 사용 모델
+  
+	![DL_3조-011](https://github.com/cku7808/My_Own_Coloring_Book/assets/66200628/91c3aa71-09db-4eaa-94d9-3b79c5a6bb1e)
+	
+	- 화풍 변환 모델
+   		- [Neural Style Transfer](https://www.tensorflow.org/tutorials/generative/style_transfer?hl=ko)
+       - [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 
-	![DL-3조_고운-_-복사본-002](https://github.com/cku7808/My_Own_Coloring_Book/assets/66200628/68fb00d8-4131-4f45-bb08-3129751ce31c)
+      > 화풍 변환 태스크의 최종 사용 모델은 Neural Style Transfer입니다.
 
-	- 화풍 변환 모델 : [Neural Style Transfer](https://www.tensorflow.org/tutorials/generative/style_transfer?hl=ko)
 	- 스케치 모델
-		- 인물 : [LDC](https://github.com/xavysp/LDC)
-		- 풍경 : [Sketch Keras](https://github.com/lllyasviel/sketchKeras)
-	- 채색 가이드 모델 : [PaletteNet](https://github.com/yongzx/PaletteNet-PyTorch)
+		- [LDC](https://github.com/xavysp/LDC)
+		- [Sketch Keras](https://github.com/lllyasviel/sketchKeras)
+ 
+		> 최종적으로 풍경 이미지는 Sketch Keras, 인물 이미지는 LDC 사용
 
+	- 채색 가이드 모델 : [PaletteNet](https://github.com/yongzx/PaletteNet-PyTorch)
 
 ### 프로젝트 결과물 
 - 풍경 
@@ -79,6 +84,9 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 
 
 ### 화풍 변환 모델 실행
+#### Neural Style Transfer
+
+#### CycleGAN
 
 ### 스케치 모델 실행
 #### LDC
