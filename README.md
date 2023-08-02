@@ -9,12 +9,12 @@
 3. [학습 환경](#학습-환경)
 4. [데이터와 모델](#데이터와-모델)
 5. [프로젝트 결과물](#프로젝트-결과물)
-6. 화풍 변환 모델 실행
-   - [Neural Style Transfer](#Neural-Style-Transfer)
-   - [CycleGAN](#CycleGAN)
-7. 스케치 모델 실행
-   - [LDC](#LDC)
-   - [Sketch Keras](#Sketch-Keras)
+6. [화풍 변환 모델 실행](#화풍-변환-모델-실행)
+   - Neural Style Transfer
+   - CycleGAN
+7. [스케치 모델 실행](#스케치-모델-실행)
+   - LDC
+   - Sketch Keras
 8. [채색 모델 실행](#채색-모델-실행)
 9. [웹페이지 작성](#웹페이지-작성)
 10. [참고 문헌](#참고-문헌)
