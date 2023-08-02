@@ -69,6 +69,7 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 	
 	- 화풍 변환 모델
    		- [Neural Style Transfer](https://www.tensorflow.org/tutorials/generative/style_transfer?hl=ko)
+       
        - [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 
       > 화풍 변환 태스크의 최종 사용 모델은 Neural Style Transfer입니다.
