@@ -89,9 +89,9 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
 
 
 ### 화풍 변환 모델 실행
-### Neural Style Transfer
+#### Neural Style Transfer
 
-### CycleGAN
+#### CycleGAN
 - 저희의 Main Model은 아니기 때문에 위 cycleGan 파일에 구글 코랩으로 구현한 모델을 간략한 주석과 함께 올려 두었습니다.
 - GAN 모델에 관심 있으신 분들은 위 파일을 참고해주시기 바랍니다. 
 
