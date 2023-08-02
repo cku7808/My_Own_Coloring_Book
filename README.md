@@ -105,11 +105,11 @@ AI를 활용한 컬러링북 제작 도안 프로젝트를 기획하였습니다
  
  	1. 데이터 폴더 생성
   	```
-   cd data
-   mkdir TRAINDATA
-   cd TRAINDATA
-   mkdir edge
-   mkdir org
+	cd data
+	mkdir TRAINDATA
+	cd TRAINDATA
+	mkdir edge
+	mkdir org
    	```
    
    	2. 이미지 resizing, label 이미지 생성 및 lst 파일 생성
